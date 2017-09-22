@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Social Media Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+  </head>
+  <body>
+  <h1>Social Media Survey</h1>
+  <p>Just seeing what people know about social and its affect on the world</p>
+  <form>
+    Full Name:<br> <input type="text" name="name" required/><br><br>    
+    Email:<br> <input type="email" name="email" required/><br><br>
+    Phone:<br> <input type="number" step="1" name="phone"/><br><br>
+    
+    <p>which social media was known first ?</p>
+    
+    Linked In <input required type="radio" name="social" value="linkedIn"/>
+    Facebook <input type="radio" name="social" value="Facebook"/>
+    Twitter<input type="radio" name="social" value="linkedIn"/>
+    Blackplanet<input type="radio" name="social" value="linkedIn"/>
+    Myspace <input type="radio" name="social" value="linkedIn"/>
+    Four Squares <input type="radio" name="social" value="linkedIn"/><br><br>
+    
+    <p>Did you know Six Degrees was the first social?</p>
+    <div required>
+      Yes<input type="checkbox" name="first" />
+      No<input  type="checkbox" name="first" />
+      I dont want to say <input type="checkbox" name="first" />
+    </div>
+    <p> What is your favorite Social Media today</p>
+    
+    <select required>>
+      <option disabled selected value> -- select an option -- </option>
+      <option>SnapChat</option>
+      <option>Twitter</option>
+      <option>Facebook</option>
+      <option>Instagram</option>
+      <option>Whats App</option>
+      <option>Venmo</option>
+      <option>Group Me</option>
+      <option>Meet Up</option>
+      <option>Linked in</option>
+      <option>QQ</option>
+      <option>tumblr</option>
+      <option>Skype</option>
+      <option>Google Plus</option>
+      <option>Other</option>
+    </select>
+    
+    <p>If you choice other please type in the social is your favorite?</p>
+    <input type="textarea" name="fav"/>
+    
+    <p>If you know of any more Social media that was not name please add them.</p>
+    <textarea row="50" columns="100"></textarea>
+    
+    <p>When your ready please submit your survey! thank you!</p>
+    <input id="submit" type="submit" name=""/>
+    
+  </form>
+  <div id= "thanks"  style="display:none">
+    <p>Thank you for filling out the form. I will now reset.</p>
+  </div>
+  <script>
+    $document.ready(function(){
+      ('#submit').click(function(){
+        $('#thanks').show();
+      })
+    })
+  </script>
+  
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+  </body>
+</html>
